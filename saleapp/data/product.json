@@ -2,8 +2,43 @@
   {
     "id": 1,
     "name": "IPhone 17",
-    "image": "",
-    "price": 10,
+    "image": "https://cdn.mediamart.vn/images/product/apple-iphone-17-pro-max-256gb-cam-vu-tru_c6f8b672.webp",
+    "price": 1000,
     "cate_id": 2
+  },
+  {
+    "id": 2,
+    "name": "Legion 5",
+    "image": "https://www.laptopvip.vn/images/ab__webp/detailed/37/100001509-eleg-t6-www.laptopvip.vn-1723778584.webp",
+    "price": 1000,
+    "cate_id": 1
+  },
+  {
+    "id": 3,
+    "name": "Xiaomi Pad 7",
+    "image": "https://cdn2.cellphones.com.vn/x/media/catalog/product/x/i/xiaomi-pad-7_1_.png",
+    "price": 500,
+    "cate_id": 3
+  },
+  {
+    "id": 4,
+    "name": "Asus VivoBook 15",
+    "image": "https://dlcdnwebimgs.asus.com/gain/859297d3-da9f-4807-81e8-7a2fdf14204d/",
+    "price": 1500,
+    "cate_id": 1
+  },
+  {
+    "id": 5,
+    "name": "Samsung S23 Ultra",
+    "image": "https://cdn.tgdd.vn/Products/Images/42/249948/samsung-galaxy-s23-ultra-green-thumbnew-600x600.jpg",
+    "price": 1000,
+    "cate_id": 2
+  },
+  {
+    "id": 6,
+    "name": "IPad Pro M4",
+    "image": "https://product.hstatic.net/200000348419/product/ipad-pro-m4-mau-silver_d4fcd5994c724863b44dc5603b12fc4b_master.png",
+    "price": 1500,
+    "cate_id": 3
   }
 ]
