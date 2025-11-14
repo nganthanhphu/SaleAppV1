@@ -26,9 +26,22 @@
                     <a class="nav-link" href="/?cate_id={{c.id}}">{{c.name}}</a>
                 </li>
                 {%endfor%}
+
+                {% if current_user.is_authenticated%}
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">
+                        <img src="{{current_user.avatar}}" width="25" alt="">
+                        Chào {{current_user.name}}!
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="/logout">Đăng xuất</a>
+                </li>
+                {% else %}
                 <li class="nav-item">
                     <a class="nav-link active" href="/login">Đăng nhập</a>
                 </li>
+                {% endif %}
             </ul>
             <form class="d-flex">
                 <input class="form-control me-2" type="text" placeholder="Nhập từ khóa" name="q">
