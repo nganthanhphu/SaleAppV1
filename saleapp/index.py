@@ -43,16 +43,28 @@ def login():
 
     return render_template("login.html", err_msg=err_msg)
 
+@app.route("/admin-login", methods=["POST"])
+def admin_login_process():
+    username = request.form.get("username")
+    password = request.form.get("password")
+
+    user = dao.auth_user(username, password)
+
+    if user:
+        login_user(user)
+        return redirect("/admin")
+    else:
+        err_msg = "Tài khoản hoặc mật khẩu không đúng!"
 
 @login_manager.user_loader
 def load_user(user_id):
     return dao.get_user_by_id(user_id=user_id)
 
-
 @app.route('/logout')
 def logout():
     logout_user()
     return redirect('/')
+
 
 @app.context_processor
 def common_attribute():

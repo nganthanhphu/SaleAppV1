@@ -40,19 +40,19 @@ class Product(BaseModel):
 
 if __name__ == "__main__":
     with app.app_context():
-        # db.create_all()
-        #
-        # c1 = Category(name='Laptop')
-        # c2 = Category(name='Mobile')
-        # c3 = Category(name='Tablet')
-        #
-        # db.session.add_all([c1,c2,c3])
-        #
-        # with open("data/product.json", encoding="utf-8") as f:
-        #     products = json.load(f)
-        #
-        #     for p in products:
-        #         db.session.add(Product(**p))
+        db.create_all()
+
+        c1 = Category(name='Laptop')
+        c2 = Category(name='Mobile')
+        c3 = Category(name='Tablet')
+
+        db.session.add_all([c1,c2,c3])
+
+        with open("data/product.json", encoding="utf-8") as f:
+            products = json.load(f)
+
+            for p in products:
+                db.session.add(Product(**p))
         pwd = hashlib.md5('123'.encode('utf-8')).hexdigest()
         u1 = User(name='User', username='user', password=pwd)
         db.session.add(u1)
